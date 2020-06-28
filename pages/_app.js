@@ -1,5 +1,7 @@
 import App from 'next/app';
 import Head from 'next/head';
+import Cookies from 'universal-cookie';
+import consts from 'consts';
 import 'styles/style.css';
 
 function MyApp({ Component, pageProps }) {
@@ -17,7 +19,10 @@ function MyApp({ Component, pageProps }) {
 MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
 
-  if (Math.random() > 0.5) {
+  const cookies = new Cookies(appContext.ctx.req.headers.cookie);
+  const password = cookies.get(consts.SiteReadCookie) ?? '';
+
+  if (password === 'letmein') {
     appProps.hasReadPermission = true;
   }
 
