@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Cookies from 'universal-cookie';
-import Login from 'Components/Login';
+import Login from 'Components/login';
 import consts from 'consts';
 
 export default function LoginPage({ hasReadPermission }) {

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Login from 'components/Login';
+import Login from 'components/login';
 
 export default function Protected({ hasReadPermission }) {
   const router = useRouter();
