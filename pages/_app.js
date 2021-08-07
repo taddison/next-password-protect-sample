@@ -2,7 +2,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import Cookies from 'universal-cookie';
 import consts from 'consts';
-import 'styles/style.css';
+import 'tailwindcss/tailwind.css';
 
 function MyApp({ Component, pageProps }) {
   return (
